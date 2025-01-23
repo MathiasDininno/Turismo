@@ -2,30 +2,26 @@ import React, { useState } from 'react';
 import './NavBar.css';
 
 const Navbar = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  // Toggle para dropdown "Servicios"
-  const toggleDropdown = () => {
-    setIsDropdownOpen((prev) => !prev);
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(prev => !prev);
   };
 
-  // Toggle para menú hamburguesa
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen((prev) => !prev);
+  const toggleDropdown = () => {
+    setIsDropdownOpen(prev => !prev);
   };
 
   return (
     <nav>
-      <div className='logo'><a href="home">Mi Logo</a></div>
-      <button className="hamburger" onClick={toggleMobileMenu}>
-        &#9776;
+      <div className='logo'><a href="#">Mi Logo</a></div>
+      <button className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`} onClick={toggleMobileMenu}>
+        {isMobileMenuOpen ? 'X' : '≡'}
       </button>
       <ul className={`navbar ${isMobileMenuOpen ? 'active' : ''}`}>
         <li className="dropdown">
-          <button className="dropbtn" onClick={toggleDropdown}>
-            Servicios
-          </button>
+          <button className="dropbtn" onClick={toggleDropdown}>Servicios</button>
           <ul className={`dropdown-content ${isDropdownOpen ? 'show' : ''}`}>
             <li><a href="#service1">Servicio 1</a></li>
             <li><a href="#service2">Servicio 2</a></li>
@@ -40,4 +36,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

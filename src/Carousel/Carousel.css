@@ -1,0 +1,71 @@
+.carrusel {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    /* Ajustable */
+    margin: auto;
+    overflow: hidden;
+}
+
+.link-img img {
+    width: 100%;
+    height: auto;
+    /* Mantiene la proporción original */
+    max-height: 400px;
+    /* Limita la altura máxima */
+    object-fit: cover;
+    /* Recorta la imagen para que llene el contenedor */
+}
+
+.link-img {
+    display: block;
+    position: relative;
+}
+
+.link-img img {
+    width: 100%;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.link-img img.hide {
+    opacity: 0;
+}
+
+@media (max-width: 768px) {
+    .carrusel {
+        max-width: 100%;
+        /* Ajusta al ancho del dispositivo */
+    }
+
+    .link-img img {
+        height: auto;
+        /* Mantiene proporción en pantallas pequeñas */
+        max-height: 250px;
+        /* Reduce la altura máxima en pantallas pequeñas */
+    }
+
+    .anterior,
+    .siguiente {
+        font-size: 14px;
+        /* Botones más pequeños */
+    }
+}
+
+@media (max-width: 480px) {
+    .carrusel {
+        padding: 10px;
+        /* Margen interno para móviles pequeños */
+    }
+
+    .link-img img {
+        max-height: 150px;
+        /* Aún más pequeño para móviles pequeños */
+    }
+
+    .anterior,
+    .siguiente {
+        font-size: 12px;
+        /* Botones aún más pequeños */
+    }
+}
