@@ -23,7 +23,6 @@ function Carousel() {
         <div className='carrusel'>
             <a href="#" className='link-img'>
                 <img src={images[currentIndex]} alt="Img futura" />
-                <p>Carrusel</p>
             </a>
 
             <CarruManual
