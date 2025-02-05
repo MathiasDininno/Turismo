@@ -1,8 +1,23 @@
+.cards-container{
+    display: grid;
+    text-align: center;
+}
+
 .cards-grid {
     display: grid;
     grid-template-columns: 33% 33% 33%;
     gap: 4px;
     margin: 2% 3%;
+    text-align: center;
+}
+
+.card{
+    border-radius: 5px;
+    background-color: #61525242;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(121, 53, 53);
+    transition: 0.3s;
+    text-align: left;
 }
 
 .card img {
