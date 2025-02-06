@@ -1,0 +1,11 @@
+.cards-grid {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    gap: 4px;
+    margin: 2% 3%;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+}

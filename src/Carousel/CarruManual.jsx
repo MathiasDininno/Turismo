@@ -1,4 +1,5 @@
 import React from 'react';
+import '../Carousel/Carousel.css'
 
 function CarruManual({ setCurrentIndex, currentIndex }) {
   // Función para manejar retroceso

@@ -3,6 +3,7 @@ import React from 'react';
 import Contact from './Contact/Contact';
 import Navbar from './NavBar/NavBar';
 import Carousel from './Carousel/Carousel';
+import Events from './Events/Events';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Contact />
       <Navbar />
       <Carousel />
+      <Events />
     </div>
   );
 }
