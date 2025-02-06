@@ -4,6 +4,7 @@ import Contact from './Contact/Contact';
 import Navbar from './NavBar/NavBar';
 import Carousel from './Carousel/Carousel';
 import Events from './Events/Events';
+import TourCiudad from './TourCiudad/TourCiudad';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Navbar />
       <Carousel />
       <Events />
+      <TourCiudad />
     </div>
   );
 }
